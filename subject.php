@@ -29,7 +29,7 @@
                     <a href="#" class="nav-link">Resources</a>
                 </li>
                 <li class="nav-list-item">
-                    <a href="#" class="nav-link">TimeTable</a>
+                    <a href="timetable.php" class="nav-link">TimeTable</a>
                 </li>
                 <li class="nav-list-item">
                     <a href="#" class="nav-link">Subject</a>
