@@ -26,13 +26,13 @@
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-list-item">
-                    <a href="#" class="nav-link">Resources</a>
+                    <a href="resource.php" class="nav-link">Resources</a>
                 </li>
                 <li class="nav-list-item">
                     <a href="timetable.php" class="nav-link">TimeTable</a>
                 </li>
                 <li class="nav-list-item">
-                    <a href="#" class="nav-link">Subject</a>
+                    <a href="subject.php" class="nav-link">Subject</a>
                 </li>
             </ul>
         </nav>

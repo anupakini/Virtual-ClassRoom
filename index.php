@@ -21,7 +21,7 @@
             </div>
             <ul class="nav-list">
                 <li class="nav-list-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-list-item">
                     <a href="resource.php" class="nav-link">Resources</a>
