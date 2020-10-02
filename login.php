@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Virtual ClassRoom</title>
+    <title>Subject</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -10,6 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="Styles.css" rel="stylesheet" id="bootstrap-css1">
+    <link href="timetable.css" rel="stylesheet" id="bootstrap-css1">
+    
     <!------ Include the above in your HEAD tag ---------->
 </head>
 
@@ -35,43 +37,45 @@
                 <li class="nav-list-item">
                     <a href="login.php" class="nav-link">Login</a>
                 </li>
+                
             </ul>
         </nav>
     </div>
+    <form action="loginredirect.php" method="post">
     <div class="content">
         <div class="container">
-            <div class="main">
-                <h1>Bulletin Board</h1>
-                <div class="quote-container">
-                    <i class="pin"></i>
-                    <div class="note yellow">
-                        <span class="small">
-                            <?php
-                            echo date("Y/m/d");
-                            ?> 
-                        </span>
-                        <h2>Assignment Due Tomorrow</h2>
-                        <p>Answer all the questions, scan and convert it to a single PDF file. The PDF should be posted in the class room. File name of the PDF should be USN_NAME OF THE STUDENT_GC_ASSIGNMENT1.pdf (for example 4JN12CS001_AMAR_GC_ASSIGNMENT1.pdf)</p>
-                    </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center mb30 mt-10">
+                <h4 style="padding-top:20px;">Teacher Login</h2>
+             </div>
+             <div class="row pb-3">
+             <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-3">
+                    <p>Username</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="txtUserName" name="txtUserName"  />
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-            <div class="col-md-4"></div>
-                <div class="col-md-4">
-                <button class="btn-success btn-quiz" style="width: 100%;height: 60px;border-radius: 32px;font-weight: bold;" onclick="loadLink()">Take a Quiz</button>
+            <div class="row pb-3">
+                <div class="col-md-3">
+                    
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                    <p>Password</p>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" id="txtpassword" name="txtpassword"  />
+                </div>
             </div>
-   
+            
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center mb30">
+                <button class="btn-success" type="submit" value="Submit" style="height: 60px;border-radius: 32px;font-weight: bold;width: 155px;margin-top: 13px;">Login</h2>
+             </div>
         </div>
     </div>
-
+</form>
 </body>
-<script>
-    function loadLink(){
-        window.open('https://docs.google.com/forms/d/1_LF8ocn8V0qILznPjRkwsWfU8QAjFe_JV0lLuemBBSU/prefill')
-    }
-</script>
+
 </html>

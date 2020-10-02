@@ -34,48 +34,52 @@
                 <li class="nav-list-item">
                     <a href="subject.php" class="nav-link">Subject</a>
                 </li>
-                <li class="nav-list-item">
-                    <a href="login.php" class="nav-link">Login</a>
-                </li>
             </ul>
         </nav>
     </div>
-    <form action="insert.php" method="post">
-    <div class="content">
-        <div class="container">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center mb30">
-                <h4 style="padding-top:20px;">Subject</h2>
-             </div>
-             <div class="row pb-2">
-                <div class="col-md-3">
-                    <p>Name</p>
-                </div>
-                <div class="col-md-9">
-                    <input type="text" id="txtName" name="txtName"  />
-                </div>
-            </div>
-            <div class="row pb-2">
-                <div class="col-md-3">
-                    <p>USN</p>
-                </div>
-                <div class="col-md-9">
-                    <input type="text" id="txtUSN" name="txtUSN"  />
-                </div>
-            </div>
-            <div class="row pb-2">
-                <div class="col-md-3">
-                    <p>Add Public Comment</p>
-                </div>
-                <div class="col-md-9">
-                    <input type="textarea" id="txtComment" name="txtComment" style="height:200px; width:100%"/>
-                </div>
-            </div>
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center mb30">
-                <button class="btn-success" type="submit" value="Submit" style="height: 60px;border-radius: 32px;font-weight: bold;width: 155px;margin-top: 13px;">Submit</h2>
-             </div>
+   <div>
+   <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "virtualclass";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, txtName, txtUSN, txtComment,reg_date FROM Comments";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    //txtName, txtUSN, txtComment,reg_date
+    while($row = $result->fetch_assoc()) {
+        echo "<div class='card text-center'>
+        <div class='card-header'>
+        ". $row["txtName"]. "
         </div>
-    </div>
-</form>
+        <div class='card-body'>
+          <h5 class='card-title'>USN : ". $row["txtUSN"]. "</h5>
+          <p class='card-text'>Comments :  ". $row["txtComment"]. "</p>
+        </div>
+        <div class='card-footer text-muted'>
+        ". $row["reg_date"]. "
+        </div>
+      </div>";
+        
+    }
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?>
+   </div>
+  
 </body>
 
 </html>

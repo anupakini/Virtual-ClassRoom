@@ -33,6 +33,9 @@
                 <li class="nav-list-item">
                     <a href="subject.php" class="nav-link">Subject</a>
                 </li>
+                <li class="nav-list-item">
+                    <a href="login.php" class="nav-link">Login</a>
+                </li>
             </ul>
         </nav>
     </div>
